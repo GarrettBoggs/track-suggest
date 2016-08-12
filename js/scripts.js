@@ -4,7 +4,8 @@ var rubyPoints = 0;
 var phpPoints = 0;
 var result = "";
 
-var questionOne = function(build){
+var questionOne = function(build) //First Question Logic
+{
   if(build == "content")
   {
     phpPoints += 1;
@@ -27,6 +28,40 @@ var questionOne = function(build){
   }
 }
 
+var questionTwo = function(company) //Second Question Logic
+{
+  if(company == "small")
+  {
+    rubyPoints += 1;
+  }
+  else
+  {
+    javaPoints += 1;
+    cPoints += 1;
+    rubyPoints += 1;
+  }
+}
+
+var questThree = function(code) //Third Question Logic
+{
+  if(code == "drupal")
+  {
+    phpPoints += 1;
+  }
+  else if(code == "net")
+  {
+    cPoints += 1;
+  }
+  else if(code == "rails")
+  {
+    rubyPoints += 1;
+  }
+  else // android
+  {
+    javaPoints += 1;
+  }
+}
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     var build = $("input:radio[name=build]:checked").val();
@@ -43,35 +78,9 @@ $(document).ready(function() {
     questionOne(build);
 
     //Second Question Logic
-    if(company == "small")
-    {
-      rubyPoints += 1;
-    }
-    else
-    {
-      javaPoints += 1;
-      cPoints += 1;
-      rubyPoints += 1;
-    }
-
+    questionTwo(company);
     //Third Question Logic
-    if(code == "drupal")
-    {
-      phpPoints += 1;
-    }
-    else if(build == "net")
-    {
-      cPoints += 1;
-    }
-    else if(build == "rails")
-    {
-      rubyPoints += 1;
-    }
-    else // android
-    {
-      javaPoints += 1;
-    }
-
+    questThree(code);
     //Output Logic;
     if((javaPoints > phpPoints) && (javaPoints > cPoints) && (javaPoints > rubyPoints))
     {
