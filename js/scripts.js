@@ -3,6 +3,7 @@ var cPoints = 0;
 var rubyPoints = 0;
 var phpPoints = 0;
 var result = "";
+var image= "";
 
 var questionOne = function(build) //First Question Logic
 {
@@ -70,6 +71,7 @@ $(document).ready(function() {
     var name = $("input#name1").val();
 
     $("#warning").remove();
+    $("#img").remove();
 
     javaPoints = 0;
     cPoints = 0;
@@ -84,19 +86,23 @@ $(document).ready(function() {
     //Output Logic;
     if((javaPoints > phpPoints) && (javaPoints > cPoints) && (javaPoints > rubyPoints))
     {
-      result="Java!";
+      result="Java/Android";
+      image = '<img src="./img/java.png" alt="picture of the java icon">';
     }
     else if((phpPoints > cPoints) && (phpPoints > rubyPoints))
     {
-      result="PHP"
+      result="PHP/Drupal";
+      image = '<img src="./img/php.png" alt="picture of the php elephant">';
     }
     else if(cPoints > rubyPoints)
     {
-      result="C"
+      result="C#/.Net";
+      image = '<img src="./img/csharp.png" alt="picture of the C# logo">';
     }
     else //Ruby
     {
-      result="Ruby"
+      result="Ruby/Rails";
+      image = '<img src="./img/ruby.png" alt="picture of ruby">';
     }
     if(name == "")
     {
@@ -106,9 +112,9 @@ $(document).ready(function() {
     {
       $(".track").text(result);
       $(".name1Input").text(name);
-      $("#output").show();
+      $(".image").append('<div id="img">' + image);
+      $("#output").fadeIn();
     }
-
 
     event.preventDefault();
   });

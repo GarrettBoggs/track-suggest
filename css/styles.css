@@ -6,6 +6,11 @@ body{
 h1{
   text-align: center;
 }
+
+h2{
+  margin-top: 25px;
+}
+
 button{
   margin-top: 30px;
   width: 200px;
@@ -19,4 +24,9 @@ button{
 
 #warning {
   color: orange;
+}
+
+#img {
+  height: 50px;
+  width: 50px;
 }
