@@ -25,3 +25,23 @@ button{
 #warning {
   color: orange;
 }
+
+#Cbutton{
+  display:none;
+  float: right;
+}
+
+#Javabutton{
+  display:none;
+  float: right;
+}
+
+#Phpbutton{
+  display:none;
+  float: right;
+}
+
+#Rubybutton{
+  display:none;
+  float: right;
+}

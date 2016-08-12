@@ -11,7 +11,7 @@ var questionOne = function(build) //First Question Logic
   {
     phpPoints += 1;
   }
-  else if(build == "games")
+  else if(build == "data")
   {
     cPoints += 1;
   }
@@ -31,13 +31,13 @@ var questionTwo = function(company) //Second Question Logic
 {
   if(company == "small")
   {
-    rubyPoints += 1;
+    rubyPoints += 0.5;
   }
   else
   {
-    javaPoints += 1;
-    cPoints += 1;
-    rubyPoints += 1;
+    javaPoints += 0.5;
+    cPoints += 0.5;
+    phpPoints += 0.5;
   }
 
   return;
@@ -71,21 +71,25 @@ var calculate = function(javaPoints, phpPoints, cPoints, rubyPoints) //calculate
   {
     result="Java/Android";
     image = '<img src="./img/java.png" alt="picture of the java icon">';
+    $("#Javabutton").show();
   }
   else if((phpPoints > cPoints) && (phpPoints > rubyPoints))
   {
     result="PHP/Drupal";
     image = '<img src="./img/php.png" alt="picture of the php elephant">';
+    $("#Phpbutton").show();
   }
   else if(cPoints > rubyPoints)
   {
     result="C#/.Net";
     image = '<img src="./img/csharp.png" alt="picture of the C# logo">';
+    $("#Cbutton").show();
   }
   else //Ruby
   {
     result="Ruby/Rails";
     image = '<img src="./img/ruby.png" alt="picture of ruby">';
+    $("#Rubybutton").show();
   }
   return;
 }
@@ -99,6 +103,11 @@ $(document).ready(function() {
 
     $("#warning").remove();
     $("#img").remove();
+    $("#Cbutton").hide();
+    $("#Rubybutton").hide();
+    $("#Javabutton").hide();
+    $("#Phpbutton").hide();
+
 
     javaPoints = 0;
     cPoints = 0;

@@ -13,93 +13,112 @@
   <body>
     <form>
       <div class="container">
-        <h1 class="jumbotron">Track Suggester</h1>
-        <h2 id="warn">What is your name?</h2>
-        <div class="form-group">
-          <input id="name1" class="form-control" type="text" placeholder="Name">
+        <h1 class="jumbotron">Which track is best for me?</h1>
+        <div div class="bg-info">
+          <h2 id="warn">What is your name?</h2>
+          <div class="form-group">
+            <input id="name1" class="form-control" type="text" placeholder="Name">
+          </div>
         </div>
         <!--Question 1 -->
-        <h2>Which would you choose to build?</h2>
-        <div class="radio">
-          <label>
-            <input type="radio" name="build" value="games" checked>
-            Database for Business
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="build" value="content">
-            Content Heavy Website
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="build" value="apps">
-            Interactive Web Application
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="build" value="all">
-            Not sure/all of the above
-          </label>
+        <div class="bg-success">
+          <h2>Which would you choose to build?</h2>
+          <div class="radio">
+            <label>
+              <input type="radio" name="build" value="data" checked>
+              Database for Business
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="build" value="content">
+              Content Heavy Website
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="build" value="apps">
+              Interactive Web Application
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="build" value="all">
+              Not sure/all of the above
+            </label>
+          </div>
         </div>
         <!--Question 2 -->
-        <h2>Where would you rather work?</h2>
-        <select class="form-control" id="company">
-          <option value="large">Large Company</option>
-          <option value="small">Start Up</option>
-        </select>
+        <div class="bg-info">
+          <h2>Where would you rather work?</h2>
+          <select class="form-control" id="company">
+            <option value="large">Large Company</option>
+            <option value="small">Start Up</option>
+          </select>
+        </div>
         <!--Question 3 -->
-        <h2>Which concept most interests you?</h2>
-        <div class="radio">
-          <label>
-            <input type="radio" name="code" value="net" checked>
-            Working with a .Net Framework
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="code" value="drupal">
-            Building content management systems
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="code" value="rails">
-            Interacting with dynamic content
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="code" value="android">
-            Working with Android user interfaces
-          </label>
+        <div class="bg-success">
+          <h2>Which concept most interests you?</h2>
+          <div class="radio">
+            <label>
+              <input type="radio" name="code" value="net" checked>
+              Working with a .Net Framework
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="code" value="drupal">
+              Building content management systems
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="code" value="rails">
+              Interacting with dynamic content
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="code" value="android">
+              Working with Android user interfaces
+            </label>
+          </div>
         </div>
 
         <!--Question 4 -->
-        <h2>Do you like to Code?</h2>
-        <select class="form-control" id="company">
-          <option>Of course!</option>
-          <option>Love to!</option>
-          <option>Naturally!</option>
-          <option>Is this even a question?</option>
-          <option>Obviously!</option>
-          <option>Quite so, old bean!</option>
-          <option>All day every day!</option>
-        </select>
-        <!--Question 5 -->
-        <h2>How did you first hear about Epicodus?</h2>
-        <select class="form-control" id="company">
-          <option>Through a friend</option>
-          <option>Online</option>
-          <option>Word of Mouth</option>
-        </select>
+        <div class="bg-info">
+          <h2>Do you like to Code?</h2>
+          <select class="form-control" id="company">
+            <option>Of course!</option>
+            <option>Love to!</option>
+            <option>Naturally!</option>
+            <option>Is this even a question?</option>
+            <option>Obviously!</option>
+            <option>Quite so, old bean!</option>
+            <option>All day every day!</option>
+            <option>Is this some type of test?</option>
+          </select>
+        </div>
+          <!--Question 5 -->
+        <div class = "bg-success">
+          <h2>How did you first hear about Epicodus?</h2>
+          <select class="form-control" id="company">
+            <option>Through a friend</option>
+            <option>Online</option>
+            <option>Word of Mouth</option>
+          </select>
+        </div>
 
         <button type="submit" class="btn btn-primary">Results!</button>
       </form>
 
       <div id="output">
+        <!--Potential Buttons -->
+        <a id="Cbutton" href="http://www.epicodus.com/c-sharp" class="btn btn-info btn-lg active" role="button">About C#</a>
+        <a id="Javabutton" href="http://www.epicodus.com/java" class="btn btn-primary btn-lg active" role="button">About Java</a>
+        <a id="Rubybutton" href="http://www.epicodus.com/ruby" class="btn btn-danger btn-lg active" role="button">About Ruby</a>
+        <a id="Phpbutton" href="http://www.epicodus.com/php" class="btn btn-warning btn-lg active" role="button">About Php</a>
+        <!-- Output -->
         <p><span class="name1Input"></span>, you should consider the following track: <span class="track"></span><span class="image"></span></p>
       </div>
     </div>
