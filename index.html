@@ -14,6 +14,7 @@
     <form>
       <div class="container">
         <h1 class="jumbotron">Track suggester</h1>
+        <h2>Which would you choose to build?</h2>
         <div class="radio">
           <label>
             <input type="radio" name="build" value="games" checked>
@@ -35,16 +36,21 @@
         <div class="radio">
           <label>
             <input type="radio" name="build" value="all">
-            Not sure/ all of the above
+            Not sure/all of the above
           </label>
         </div>
 
+        <h2>Where would you rather work?</h2>
+        <select class="form-control" id="android">
+          <option value="1">Large Company</option>
+          <option value="2">Start Up</option>
+        </select>
         <button type="submit" class="btn btn-primary">Results!</button>
       </form>
 
 
         <div id="output">
-          <p>You should go into the following track:<span class="track"></span></p>
+          <p>You should go into the following track: <span class="track"></span></p>
         </div>
       </div>
     </div>
