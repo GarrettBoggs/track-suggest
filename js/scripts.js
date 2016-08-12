@@ -82,7 +82,7 @@ var calculate = function(javaPoints, phpPoints, cPoints, rubyPoints) //calculate
     image = '<img src="./img/csharp.png" alt="picture of the C# logo">';
     $("#Cbutton").show();
   }
-  else //Ruby
+  else //Ruby (In the event of a points tie, Ruby is displayed)
   {
     result="Ruby/Rails";
     image = '<img src="./img/ruby.png" alt="picture of ruby">';
@@ -131,5 +131,4 @@ $(document).ready(function() {
     }
     event.preventDefault();
   });
-
 });
