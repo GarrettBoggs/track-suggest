@@ -69,15 +69,14 @@ $(document).ready(function() {
     var code = $("input:radio[name=code]:checked").val();
     var name = $("input#name1").val();
 
+    $("#warning").remove();
 
     javaPoints = 0;
     cPoints = 0;
     rubyPoints = 0;
     phpPoints = 0;
-    //First Question Logic
-
+    //First Question Call
     questionOne(build);
-
     //Second Question Logic
     questionTwo(company);
     //Third Question Logic
@@ -99,11 +98,17 @@ $(document).ready(function() {
     {
       result="Ruby"
     }
+    if(name == "")
+    {
+      $("#warn").append('<div id="warning">' + "Please enter your name!" + '</div>');
+    }
+    else
+    {
+      $(".track").text(result);
+      $(".name1Input").text(name);
+      $("#output").show();
+    }
 
-    $(".track").text(result);
-    $(".name1Input").text(name);
-
-    $("#output").show();
 
     event.preventDefault();
   });
