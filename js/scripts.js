@@ -67,6 +67,7 @@ $(document).ready(function() {
     var build = $("input:radio[name=build]:checked").val();
     var company = $("#company").val();
     var code = $("input:radio[name=code]:checked").val();
+    var name = $("input#name1").val();
 
 
     javaPoints = 0;
@@ -100,6 +101,7 @@ $(document).ready(function() {
     }
 
     $(".track").text(result);
+    $(".name1Input").text(name);
 
     $("#output").show();
 
