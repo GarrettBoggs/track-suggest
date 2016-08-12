@@ -1,4 +1,4 @@
-var javaPoints = 0;
+var javaPoints = 0;  //declare variables
 var cPoints = 0;
 var rubyPoints = 0;
 var phpPoints = 0;
@@ -55,7 +55,7 @@ var questThree = function(code) //Third Question Logic
   {
     rubyPoints += 1;
   }
-  else // android
+  else // if == android
   {
     javaPoints += 1;
   }
@@ -118,7 +118,7 @@ $(document).ready(function() {
     //Output Logic;
     calculate(javaPoints, phpPoints, cPoints, rubyPoints);
 
-    if(name == "")
+    if(name == "") //warns user if no name is entered
     {
       $("#warn").append('<div id="warning">' + "Please enter your name!" + '</div>');
     }
