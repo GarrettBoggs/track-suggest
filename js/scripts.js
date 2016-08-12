@@ -23,7 +23,6 @@ var questionOne = function(build) //First Question Logic
   {
     javaPoints += 1;
   }
-
   return;
 }
 
@@ -39,7 +38,6 @@ var questionTwo = function(company) //Second Question Logic
     cPoints += 0.5;
     phpPoints += 0.5;
   }
-
   return;
 }
 
@@ -61,7 +59,6 @@ var questThree = function(code) //Third Question Logic
   {
     javaPoints += 1;
   }
-
   return;
 }
 
@@ -108,7 +105,6 @@ $(document).ready(function() {
     $("#Javabutton").hide();
     $("#Phpbutton").hide();
 
-
     javaPoints = 0;
     cPoints = 0;
     rubyPoints = 0;
@@ -133,7 +129,7 @@ $(document).ready(function() {
       $(".image").append('<div id="img">' + image);
       $("#output").fadeIn();
     }
-
     event.preventDefault();
   });
+
 });
