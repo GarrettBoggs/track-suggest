@@ -1,7 +1,7 @@
 #### By _**Garrett Boggs**_
 
  ## Description
- _This is a basic track suggestion site that offers information about which track a student at Epicodus should take. Created using HTML, CSS, and Bootstrap framework_
+ _This is a basic track suggestion site that offers information about which track a student at Epicodus should take. Created using HTML, CSS, JavaScript, jQuery, and Bootstrap framework_
 
  ## Setup instruction
 

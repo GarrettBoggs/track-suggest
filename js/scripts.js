@@ -10,23 +10,21 @@ var questionOne = function(build) //First Question Logic
   if(build == "content")
   {
     phpPoints += 1;
-    return;
   }
   else if(build == "games")
   {
     cPoints += 1;
-    return;
   }
   else if(build == "apps")
   {
     rubyPoints += 1;
-    return;
   }
   else // all
   {
     javaPoints += 1;
-    return;
   }
+
+  return;
 }
 
 var questionTwo = function(company) //Second Question Logic
@@ -41,6 +39,8 @@ var questionTwo = function(company) //Second Question Logic
     cPoints += 1;
     rubyPoints += 1;
   }
+
+  return;
 }
 
 var questThree = function(code) //Third Question Logic
@@ -61,6 +61,33 @@ var questThree = function(code) //Third Question Logic
   {
     javaPoints += 1;
   }
+
+  return;
+}
+
+var calculate = function(javaPoints, phpPoints, cPoints, rubyPoints) //calculate logic
+{
+  if((javaPoints > phpPoints) && (javaPoints > cPoints) && (javaPoints > rubyPoints))
+  {
+    result="Java/Android";
+    image = '<img src="./img/java.png" alt="picture of the java icon">';
+  }
+  else if((phpPoints > cPoints) && (phpPoints > rubyPoints))
+  {
+    result="PHP/Drupal";
+    image = '<img src="./img/php.png" alt="picture of the php elephant">';
+  }
+  else if(cPoints > rubyPoints)
+  {
+    result="C#/.Net";
+    image = '<img src="./img/csharp.png" alt="picture of the C# logo">';
+  }
+  else //Ruby
+  {
+    result="Ruby/Rails";
+    image = '<img src="./img/ruby.png" alt="picture of ruby">';
+  }
+  return;
 }
 
 $(document).ready(function() {
@@ -84,26 +111,8 @@ $(document).ready(function() {
     //Third Question Logic
     questThree(code);
     //Output Logic;
-    if((javaPoints > phpPoints) && (javaPoints > cPoints) && (javaPoints > rubyPoints))
-    {
-      result="Java/Android";
-      image = '<img src="./img/java.png" alt="picture of the java icon">';
-    }
-    else if((phpPoints > cPoints) && (phpPoints > rubyPoints))
-    {
-      result="PHP/Drupal";
-      image = '<img src="./img/php.png" alt="picture of the php elephant">';
-    }
-    else if(cPoints > rubyPoints)
-    {
-      result="C#/.Net";
-      image = '<img src="./img/csharp.png" alt="picture of the C# logo">';
-    }
-    else //Ruby
-    {
-      result="Ruby/Rails";
-      image = '<img src="./img/ruby.png" alt="picture of ruby">';
-    }
+    calculate(javaPoints, phpPoints, cPoints, rubyPoints);
+
     if(name == "")
     {
       $("#warn").append('<div id="warning">' + "Please enter your name!" + '</div>');
