@@ -41,13 +41,39 @@
         </div>
 
         <h2>Where would you rather work?</h2>
-        <select class="form-control" id="android">
-          <option value="1">Large Company</option>
-          <option value="2">Start Up</option>
+        <select class="form-control" id="company">
+          <option value="large">Large Company</option>
+          <option value="small">Start Up</option>
         </select>
+
+        <h2>Which Code mode interests you?</h2>
+        <div class="radio">
+          <label>
+            <input type="radio" name="code" value="net" checked>
+            .Net
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="code" value="drupal">
+            Drupal
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="code" value="rails">
+            Rails
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="code" value="android">
+            Android
+          </label>
+        </div>
+
         <button type="submit" class="btn btn-primary">Results!</button>
       </form>
-
 
         <div id="output">
           <p>You should go into the following track: <span class="track"></span></p>
